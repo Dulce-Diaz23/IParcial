@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{96C0890B-D6F4-4304-913A-37798134F751}</ProjectGuid>
+    <ProjectGuid>{28371EA6-BA0B-42FF-9029-43F3DE93581E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>IParcial</RootNamespace>
-    <AssemblyName>IParcial</AssemblyName>
+    <RootNamespace>Tareas</RootNamespace>
+    <AssemblyName>Tareas</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,44 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ejercicio1.cs">
+    <Compile Include="Tarea No 1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ejercicio1.Designer.cs">
-      <DependentUpon>Ejercicio1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ejercicio2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ejercicio2.Designer.cs">
-      <DependentUpon>Ejercicio2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ejercicio3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ejercicio3.Designer.cs">
-      <DependentUpon>Ejercicio3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ejercicio4.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ejercicio4.Designer.cs">
-      <DependentUpon>Ejercicio4.cs</DependentUpon>
+    <Compile Include="Tarea No 1.Designer.cs">
+      <DependentUpon>Tarea No 1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Ejercicio1.resx">
-      <DependentUpon>Ejercicio1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ejercicio2.resx">
-      <DependentUpon>Ejercicio2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ejercicio3.resx">
-      <DependentUpon>Ejercicio3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ejercicio4.resx">
-      <DependentUpon>Ejercicio4.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -93,6 +63,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Tarea No 1.resx">
+      <DependentUpon>Tarea No 1.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
