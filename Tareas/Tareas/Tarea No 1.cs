@@ -30,11 +30,11 @@ namespace Tareas
 
             if (n == 0)
             {
-                MessageBox.Show("El numero ingresado es Par");
+                ResultadLabel.Text = Convert.ToString("El numero ingresado es Par");
             }
             else
             {
-                MessageBox.Show("El numero ingresado es Impar");
+                ResultadLabel.Text = Convert.ToString("El numero ingresado es Impar");
             }
             return n;
         }
@@ -44,11 +44,11 @@ namespace Tareas
     
             if (numero >0)
             {
-              Resultado2TextBox.Text = Convert.ToString("El valor ingresado es Positivo");
+              ResultadLabel.Text = Convert.ToString("El valor ingresado es Positivo");
             }
             else
             {
-                Resultado2TextBox.Text = Convert.ToString("El valor ingresado es Negativo");
+              ResultadLabel.Text = Convert.ToString("El valor ingresado es Negativo");
             }
 
            return numero;
