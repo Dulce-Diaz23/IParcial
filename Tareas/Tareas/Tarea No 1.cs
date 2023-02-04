@@ -17,41 +17,49 @@ namespace Tareas
             InitializeComponent();
         }
 
+        
         private void EjecutarButton_Click(object sender, EventArgs e)
         {
-            ParImpar(Convert.ToInt32(NumeroTextBox.Text));
-            PositivoNegativo(Convert.ToInt32(NumeroTextBox.Text));
+            String numero, nume;
 
+            if (NumeroTextBox.Text == "")
+            {
+                errorProvider.SetError(NumeroTextBox, "Ingrese un valor");
+                return;
+            }
+            errorProvider.Clear();
+
+            int num = Convert.ToInt32(NumeroTextBox.Text);
+            numero =ParImpar(num);
+            nume= PositivoNegativo(num);
+            MessageBox.Show("El valor ingresado es " + numero + " y " + nume, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            //label2.Text = Convert.ToString("El valor ingresado es " + numero + " y " + nume);
         }
 
-        private int ParImpar (int numero)
+        private String ParImpar(int num)
         {
-            int n = numero % 2;
+            int n = num % 2;
+            String resultado;
 
             if (n == 0)
-            {
-                ResultadLabel.Text = Convert.ToString("El numero ingresado es Par");
-            }
+                resultado = "Par";
             else
-            {
-                ResultadLabel.Text = Convert.ToString("El numero ingresado es Impar");
-            }
-            return n;
+                resultado = "Impar";
+
+            return resultado;
         }
 
-        private int PositivoNegativo(int numero)
+        private String PositivoNegativo(int numero)
         {
-    
-            if (numero >0)
-            {
-              ResultadLabel.Text = Convert.ToString("El valor ingresado es Positivo");
-            }
-            else
-            {
-              ResultadLabel.Text = Convert.ToString("El valor ingresado es Negativo");
-            }
+            String resultad2;
 
-           return numero;
+            if (numero >0)
+                resultad2 = "Positivo";
+            else
+                resultad2 = "Negativo";
+
+            return resultad2;
         }
     }
 }
