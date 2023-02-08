@@ -65,6 +65,11 @@ namespace IParcial
             {
                 edad = fechaActual.Year - FechaNacimiento.Year;
                 return edad;
+
+                if (FechaNacimiento.Month > fechaActual.Month)
+                {
+                    --edad;
+                }
             }
         }
 
