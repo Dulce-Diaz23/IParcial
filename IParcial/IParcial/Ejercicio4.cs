@@ -25,8 +25,48 @@ namespace IParcial
             MesTextBox.Text = fecha.Month.ToString("MMMM");
             AnioTextBox.Text = fecha.Year.ToString();
             SemanaTextBox.Text = fecha.DayOfWeek.ToString();
+
+            //Calcular la fecha de la cita
+            if (DiasTextBox.Text == "")
+            {
+                errorProvider.SetError(DiasTextBox, "Ingrese un valor");
+                return;
+            }
+           
+            int numeroDias = Convert.ToInt32(DiasTextBox.Text); //Catura el numero que se ingresara de la fecha cita
+            DateTime fechaActual = DateTime.Now;
+
+            CitaTextBox.Text = fechaActual.AddDays(numeroDias).ToShortDateString();
+
+            if (RestarTextBox.Text == "")
+            {
+                errorProvider.SetError(RestarTextBox, "Ingrese un valor");
+                return;
+            }
+            errorProvider.Clear();
+
+            int restarDias = Convert.ToInt32(RestarTextBox.Text);
+            FechaNuevaTextBox.Text = fecha.AddDays(-restarDias).ToLongDateString();
+
+            MessageBox.Show("La edad es:" + DevolverEdad(fecha));
+            DevolverEdad(fecha);
         }
 
-       
+        private int DevolverEdad(DateTime FechaNacimiento)
+        {
+            DateTime fechaActual = DateTime.Now;
+            int edad = 0;
+
+            if (FechaNacimiento > fechaActual)
+            {
+                return 0;
+            }
+            else
+            {
+                edad = fechaActual.Year - FechaNacimiento.Year;
+                return edad;
+            }
+        }
+
     }
 }
